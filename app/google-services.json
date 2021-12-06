@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "354260782288",
+    "firebase_url": "https://basedatess-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "basedatess",
+    "storage_bucket": "basedatess.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:354260782288:android:8fba68cfe04e8f0f9fe2d5",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "354260782288-uki8neqgvula73l8lbkav7joubq48eib.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRVX3xFNZMX4ydsXlOPcjWeNvCZW0QuiM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "354260782288-uki8neqgvula73l8lbkav7joubq48eib.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
