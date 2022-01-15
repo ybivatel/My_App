@@ -16,7 +16,7 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private LinearLayout main1;
     private Button student;
     private Button teacher;
@@ -28,29 +28,18 @@ public class MainActivity extends AppCompatActivity {
         main1 = findViewById(R.id.main1);
         student = findViewById(R.id.student);
         teacher = findViewById(R.id.teacher);
+        teacher.setOnClickListener(this);
+        student.setOnClickListener(this);
     }
-    public void addListenerButton() {
-        student.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void  onClick(View v) {
-                        Intent intent=new Intent(MainActivity.this,MainActivity2.class);
-                        startActivity(intent);
-                    }
-                }
-
-        );
-        teacher.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void  onClick(View v) {
-                        Intent intent=new Intent(MainActivity.this,MainActivity3.class);
-                        startActivity(intent);
-                    }
-                }
-
-        );
-
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.teacher:
+                Intent intent = new Intent(this, MainActivity3.class);
+                startActivity(intent);
+            case R.id.student:
+                Intent intent1 = new Intent(this, MainActivity2.class);
+                startActivity(intent1);
+        }
     }
-
 }

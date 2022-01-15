@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
-public class MainActivity2 extends AppCompatActivity {
+public class MainActivity2 extends AppCompatActivity implements View.OnClickListener {
     private LinearLayout main2;
     private Button isp;
     private Button ca;
@@ -20,27 +20,18 @@ public class MainActivity2 extends AppCompatActivity {
         main2 = findViewById(R.id.main2);
         isp = findViewById(R.id.isp);
         ca = findViewById(R.id.ca);
+        isp.setOnClickListener(this);
+        ca.setOnClickListener(this);
     }
-        public void addListenerButton(){
-            isp.setOnClickListener(
-                    new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Intent intent = new Intent(MainActivity2.this, ReadActivity.class);
-                            startActivity(intent);
-                        }
-                    }
-
-            );
-            ca.setOnClickListener(
-                    new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Intent intent = new Intent(MainActivity2.this, MainActivity7.class);
-                            startActivity(intent);
-                        }
-                    }
-
-            );
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.isp:
+                Intent intent = new Intent(this, ReadActivity.class);
+                startActivity(intent);
+            case R.id.ca:
+                Intent intent1 = new Intent(this, MainActivity7.class);
+                startActivity(intent1);
         }
     }
+}
